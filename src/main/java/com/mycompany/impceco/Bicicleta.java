@@ -5,7 +5,8 @@ public class Bicicleta implements ImpactoEcologico {
     private double mantenimiento;
     private int vidaUtil;
 
-    public Bicicleta(double emisionesProduccion, String tipoBateria, double eficienciaEnergetica, double mantenimiento, int vidaUtil) {
+    public Bicicleta(double emisionesProduccion, String tipoBateria, 
+            double eficienciaEnergetica, double mantenimiento, int vidaUtil) {
         this.emisionesProduccion = emisionesProduccion;
         this.tipoBateria = tipoBateria;
         this.eficienciaEnergetica = eficienciaEnergetica;
@@ -15,7 +16,8 @@ public class Bicicleta implements ImpactoEcologico {
 
     @Override
     public double calcularImpactoEcologico() {
-        return emisionesProduccion + eficienciaEnergetica - mantenimiento + (vidaUtil / eficienciaEnergetica);
+        return emisionesProduccion + eficienciaEnergetica - mantenimiento 
+                + (vidaUtil / eficienciaEnergetica);
     }
 
     @Override
